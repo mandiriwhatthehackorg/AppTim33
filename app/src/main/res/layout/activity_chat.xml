@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChatActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_back_button"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ash"></LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="Hari Ini"
+                        android:textColor="@color/grey2"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/activity_chat_recycle_layout"
+                        android:paddingBottom="60dp">
+
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/outline_more_rounded_edit_text"
+        android:padding="3dp"
+        android:layout_alignParentRight="true">
+
+
+        <EditText
+            android:id="@+id/activity_chat_edit_text"
+            android:hint="Katakan sesuatu..."
+            android:fontFamily="@font/roboto"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:textColor="@color/grey2"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+
+        <ImageView
+            android:id="@+id/activity_chat_send_request_button"
+            android:src="@drawable/icon_request_transfer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="44dp" />
+        <ImageView
+            android:id="@+id/activity_chat_send_button"
+            android:padding="4dp"
+            android:src="@drawable/ic_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="44dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

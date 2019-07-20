@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "355186486262",
+    "firebase_url": "https://jasanesia-5c7eb.firebaseio.com",
+    "project_id": "jasanesia-5c7eb",
+    "storage_bucket": "jasanesia-5c7eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355186486262:android:c9c0be88d1e331cc",
+        "android_client_info": {
+          "package_name": "men.ngopi.zakwan.jasanesia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355186486262-flhp09bfntk3fddg01r4ogtk46qme1al.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjJiGjfBI653WYT5L0My_0VFpRNfRPnSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355186486262-flhp09bfntk3fddg01r4ogtk46qme1al.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
