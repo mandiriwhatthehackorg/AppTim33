@@ -29,10 +29,6 @@
                     android:src="@drawable/ic_back_button"/>
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/ash"></LinearLayout>
 
             <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"

@@ -18,10 +18,11 @@ import com.pixplicity.easyprefs.library.Prefs;
 import java.util.ArrayList;
 import java.util.List;
 
-import men.ngopi.zakwan.jasanesia.ChatActivity;
+import men.ngopi.zakwan.jasanesia.ConfirmActivity;
 import men.ngopi.zakwan.jasanesia.Login.LoginActivity;
 import men.ngopi.zakwan.jasanesia.MainActivity;
 import men.ngopi.zakwan.jasanesia.R;
+import men.ngopi.zakwan.jasanesia.SummaryActivity;
 import men.ngopi.zakwan.jasanesia.Utils.PublicString;
 
 public class IntroActivity extends AppCompatActivity {
@@ -69,8 +70,10 @@ public class IntroActivity extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class );
-                Intent mainActivity = new Intent(getApplicationContext(),ChatActivity.class );
+                Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class );
+//                Intent mainActivity = new Intent(getApplicationContext(),ChatActivity.class );
+//                Intent mainActivity = new Intent(getApplicationContext(),SummaryActivity.class );
+//                Intent mainActivity = new Intent(getApplicationContext(),ConfirmActivity.class );
                 startActivity(mainActivity);
                 finish();
             }

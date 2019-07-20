@@ -25,7 +25,8 @@
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ChatActivity" />
-        <activity android:name=".ConfirmActivity"></activity>
+        <activity android:name=".ConfirmActivity" />
+        <activity android:name=".SummaryActivity"></activity>
     </application>
 
 </manifest>

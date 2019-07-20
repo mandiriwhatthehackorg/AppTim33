@@ -1,5 +1,6 @@
 package men.ngopi.zakwan.jasanesia;
 
+import android.content.Intent;
 import android.icu.util.Calendar;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -19,14 +20,12 @@ import android.widget.TextView;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import men.ngopi.zakwan.jasanesia.Model.Freelancer;
 import men.ngopi.zakwan.jasanesia.Model.MessageModel;
 
 public class ChatActivity extends AppCompatActivity {
@@ -147,17 +146,21 @@ public class ChatActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
 
+//                          Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class );
+//                          Intent mainActivity = new Intent(getApplicationContext(),ChatActivity.class );
+                            Intent mainActivity = new Intent(getApplicationContext(),SummaryActivity.class );
+//                          Intent mainActivity = new Intent(getApplicationContext(),ConfirmActivity.class );
+                            startActivity(mainActivity);
                         }
                     });
                 }else if(model.getTipe_user().equals("0") && model.getTipe_transaksi().equals("1") && model.getStatus_pembayaran().equals("1")){
-                    holder.transferLinearLayout.setVisibility(View.VISIBLE);
+                    holder.suksesLinearLayout.setVisibility(View.VISIBLE);
+                    holder.freelancerLinearLayout.setVisibility(View.GONE);
+                    holder.sendirilancerLinearLayout.setVisibility(View.GONE);
+                    holder.namaSuksesText.setText(model.getNama_pengirim());
+                    holder.nominalSukses.setText(model.getText());
                     holder.angka.setText(model.getText());
-                    holder.transBtn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
 
-                        }
-                    });
                 }
             }
 
@@ -179,8 +182,8 @@ public class ChatActivity extends AppCompatActivity {
 
 
     public class MessageHolder extends RecyclerView.ViewHolder {
-        private TextView nama, textUserLain , textUserSendiri , angka , namaForTransac;
-        private LinearLayout sendirilancerLinearLayout , freelancerLinearLayout , transferLinearLayout;
+        private TextView nama, textUserLain , textUserSendiri , angka , namaForTransac , namaSuksesText , nominalSukses;
+        private LinearLayout sendirilancerLinearLayout , freelancerLinearLayout , transferLinearLayout , suksesLinearLayout;
         private Button transBtn;
         public MessageHolder(View itemView){
             super(itemView);
@@ -193,6 +196,9 @@ public class ChatActivity extends AppCompatActivity {
             freelancerLinearLayout = itemView.findViewById(R.id._activity_chat_freelancer_linear);
             transferLinearLayout = itemView.findViewById(R.id.activity_chat_transac_layout);
             namaForTransac = itemView.findViewById(R.id._activity_chat_nama_freelancer_for_transac);
+            suksesLinearLayout = itemView.findViewById(R.id.activity_chat_transac_layout_setelah_sukses);
+            namaSuksesText = itemView.findViewById(R.id._activity_chat_nama_freelancer_for_transac_sukses);
+            nominalSukses = itemView.findViewById(R.id._activity_chat_nominal_setelah_trasnfer_sukses);
         }
     }
 
