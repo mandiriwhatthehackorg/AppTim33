@@ -62,7 +62,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Zakwan Dhiyaulhaq"
+                        android:text="Damaz Bagaskara"
                         android:textColor="@color/white"
                         android:fontFamily="@font/roboto"
                         android:layout_margin="12dp"
@@ -71,7 +71,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mobile Developer"
+                        android:text="UI/UX Designer"
                         android:textColor="@color/white"
                         android:fontFamily="@font/roboto"
                         android:layout_marginBottom="18dp"
@@ -165,7 +165,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Trainee Programmer"
+                                        android:text="Trainee Designer"
                                         android:textSize="15dp"
                                         android:textColor="@color/colorPrimary"
                                         android:fontFamily="@font/roboto_bold"/>
@@ -248,7 +248,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Programmer"
+                                        android:text="Designer"
                                         android:textSize="15dp"
                                         android:textColor="@color/colorPrimary"
                                         android:fontFamily="@font/roboto_bold"/>
@@ -330,7 +330,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Programmer Senior"
+                                        android:text="Designer Senior"
                                         android:textSize="15dp"
                                         android:textColor="@color/colorPrimary"
                                         android:fontFamily="@font/roboto_bold"/>

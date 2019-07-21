@@ -125,7 +125,7 @@ public class ChatActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull final MessageHolder holder, int position, @NonNull MessageModel model) {
+            protected void onBindViewHolder(@NonNull final MessageHolder holder,final int position, @NonNull MessageModel model) {
                 Log.d("Get Id User", "onEvent: "+ model.getId());
 
                 if(model.getTipe_user().equals("1") && model.getTipe_transaksi().equals("0")){
@@ -146,9 +146,11 @@ public class ChatActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
 
+                            String id = adapter.getSnapshots().getSnapshot(position).getId();
 //                          Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class );
 //                          Intent mainActivity = new Intent(getApplicationContext(),ChatActivity.class );
                             Intent mainActivity = new Intent(getApplicationContext(),SummaryActivity.class );
+                            mainActivity.putExtra("ID_MESSAGE", id);
 //                          Intent mainActivity = new Intent(getApplicationContext(),ConfirmActivity.class );
                             startActivity(mainActivity);
                         }

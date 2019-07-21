@@ -28,7 +28,36 @@
                     android:padding="8dp"
                     android:src="@drawable/ic_back_button"/>
 
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Damaz Bagaskara"
+                        android:textSize="18dp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/roboto_bold"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="6dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_option_menu"/>
+
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ash"></LinearLayout>
 
             <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
